@@ -5,3 +5,9 @@
  * HINT:
  * This can be done by either using a LEFT JOIN or by using the NOT IN clause and a subquery.
  */
+
+SELECT title 
+FROM film
+LEFT JOIN inventory USING(film_id)
+WHERE inventory_id IS NULL
+ORDER BY title;
